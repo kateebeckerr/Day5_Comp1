@@ -1,9 +1,9 @@
 ---
 title: "Day5_Comp_1"
-format: 
-    html:  
-    code-fold:  true
-    code-summary: "Show me the code"
+format :
+  html : 
+    code-fold: true 
+    code-summary: "show me the code" 
 editor: visual 
 execute: 
   echo : true
@@ -49,7 +49,7 @@ ggplot(data = starwars, aes(x = height, y = mass)) +
 
 -   starwars\$height, gives a vector of VALUES
 
-# Calculate Summary Statistics 
+# Calculate Summary Statistics
 
 -   mean() function to find means (better for symmetric data)
 
@@ -66,4 +66,16 @@ mean_height
 ```{r}
 sd_height <- sd(starwars$height, na.rm =TRUE)
 sd_height
+```
+
+# In-line reporting using code outputs
+
+the mean height of star wars character is 174.38cm with a standard deviation of 34.8 cm, values are disconnected from actual data producing them, not a good way! typing values out is un-reproducible and not automated way to return a value we want in report
+
+instead..
+
+the mean height of star wars character is 'r mean_height' 174.38cm with a standard deviation of 34.8 cm (rather than text should show you actual value pulled from actual code)/ so no mistakes , everything is tied together
+
+```{r}
+
 ```
