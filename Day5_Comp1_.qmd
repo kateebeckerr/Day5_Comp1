@@ -1,0 +1,17 @@
+---
+title: "Day 5 Computation Session 1"
+format: html
+editor : visual 
+execute : 
+echo : false
+warning : false
+---
+
+# Computations 1 Day 5 
+
+```{r}
+# supresses warning and message 
+
+library(tidyverse)
+
+```
