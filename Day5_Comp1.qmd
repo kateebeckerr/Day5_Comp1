@@ -1,13 +1,13 @@
 ---
 title: "Day5_Comp_1"
 format: 
-html:  
-  code-fold:  true
-  code-summary: "Show me the code"
-editor:  visual 
-excute: 
-echo : true
-warning: false 
+    html:  
+    code-fold:  true
+    code-summary: "Show me the code"
+editor: visual 
+execute: 
+  echo : true
+  warning: false 
 ---
 
 ### Computation 1 Day 5
@@ -29,20 +29,41 @@ library(tidyverse)
 -   stage, commit, push! check and see changes are safely stored
 
 ```{r}
+head(starwars)
+```
+
+```{r}
 dim(starwars)
 ```
 
 ```{r}
 ggplot(data = starwars, aes(x=height)) +
-  geom_histogram()
+  geom_histogram(colour ="red")
 ```
 
 ```{r}
+#always check render to see if warnings etc. show up when rendered 
 ggplot(data = starwars, aes(x = height, y = mass)) +
-  geom_point()
+  geom_point(colour = "blue",size = 1)
 ```
 
+-   starwars\$height, gives a vector of VALUES
+
+# Calculate Summary Statistics 
+
+-   mean() function to find means (better for symmetric data)
+
+-   use sd() function to find standard deviations (better for symmetric data, skewed data use median)
+
 ```{r}
+#have mising or unknown values in vector default is to say i dont know value (use na.rm)
+mean_height <- mean(starwars$height, na.rm =TRUE)
+mean_height
+```
 
+-   find and store standard deviation for character heights
 
+```{r}
+sd_height <- sd(starwars$height, na.rm =TRUE)
+sd_height
 ```
